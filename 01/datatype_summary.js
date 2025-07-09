@@ -44,3 +44,28 @@ console.log(heros[0])
 console.log(myData)
 
 myFunction();
+
+
+//*******************************
+
+//memory type
+// stack(Primitive datatype), Heap(non primitive)
+
+let myYoutubename = "Harikrishnan"
+let anothername = myYoutubename
+anothername = "hellohello"
+
+console.log(myYoutubename);
+console.log(anothername);
+
+let user ={
+    email: "user@gmail.com",
+    upi: "user@ybl"
+}
+
+let userTwo = user
+
+userTwo.email = "hari@gmail.com"
+
+console.log(user.email);
+console.log(userTwo.email);
