@@ -30,3 +30,4 @@ console.log("B", myn1);
 const myn2 = myArr.splice(2, 5);
 console.log("c", myArr);
 console.log("d", myn2);
+
