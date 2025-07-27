@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 3</title>
+</head>
+<body style="background-color: black; color:white">
+    <ul class="languages">
+        <li>Javascript</li>
+        <!-- <li>Python</li>
+        <li>Java</li>
+        <li>C++</li> -->
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`;
+        const ul = document.querySelector('.languages');
+        ul.appendChild(li);
+    }
+    addLanguage('Python');
+    addLanguage('Java');
+    addLanguage('C++');
+
+    function addOptiLanguage(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.languages').appendChild(li);
+    }
+
+    addOptiLanguage('C#');
+    addOptiLanguage('Go');
+    addOptiLanguage('Rust');
+
+    //edit 
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML = 'TypeScript';
+
+    const thirdLang = document.createElement("li");
+    thirdLang.textContent = 'Mojo';
+    secondLang.replaceWith(thirdLang);
+
+    //remove
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove();
+</script>
+</html>
